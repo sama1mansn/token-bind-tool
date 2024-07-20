@@ -52,7 +52,7 @@ func main() {
 	)
 	// prepare and add flags
 	rootCmd.PersistentPreRunE = concatCobraCmdFuncs(bindFlagsLoadViper, rootCmd.PersistentPreRunE)
-	rootCmd.SilenceUsage = true
+	rootCmd.SilenceUsage = false
 	err := rootCmd.Execute()
 	if err != nil {
 		os.Exit(1)
